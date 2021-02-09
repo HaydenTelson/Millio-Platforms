@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - FrogEnemy
   - Berry
+  - EnemyRespawn
+  - BerryRespawn
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,9 +24,14 @@ public class PlayerMovement : MonoBehaviour
 
     public float playerCurrHealth;
 
+    public static PlayerMovement instance;
+
+    public static HealthBar healthBar;
+
     private void Start() 
     {
         playerCurrHealth = playerMaxHealth;
+        healthBar.SetHealth(playerCurrHealth);
     }
 
     private void Update()

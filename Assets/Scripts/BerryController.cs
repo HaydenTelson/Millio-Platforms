@@ -6,9 +6,17 @@ public class BerryController : MonoBehaviour
 {
     public Animator animator;
     
-    private void OnCollisionEnter2D(Collision2D other) 
+    // private void OnCollisionEnter2D(Collision2D other) 
+    // {
+    //     if(other.collider.tag == "Player")
+    //     {
+    //         StartCoroutine(onPickup());
+    //     }
+    // }
+
+    private void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.collider.tag == "Player")
+        if(other.tag == "Player")
         {
             StartCoroutine(onPickup());
         }
@@ -21,10 +29,4 @@ public class BerryController : MonoBehaviour
         Destroy(gameObject); 
 
     }
-
-
-
-
-
-
 }
